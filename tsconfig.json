@@ -2,20 +2,23 @@
   "extends": "@tsconfig/svelte/tsconfig.json",
   "exclude": ["node_modules/*"],
   "compilerOptions": {
-    "types": ["svelte"],
+    "types": ["svelte", "node"],
     "declaration": true,
-    "declarationDir": "./dist/types",
+    "outDir": "./dist/types",
     "declarationMap": true,
     "emitDeclarationOnly": true,
     "noEmit": false,
-    "target": "ESNext",
-    "useDefineForClassFields": true,
-    "module": "ESNext",
-    "resolveJsonModule": true,
     "allowJs": true,
     "checkJs": true,
-    "isolatedModules": true
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "strict": true,
+    "moduleResolution": "NodeNext",
+    "customElement": true
   },
-  "include": ["src/**/*.d.ts", "src/**/*.ts", "src/**/*.js", "src/**/*.svelte"],
+  "include": ["src/**/*"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
