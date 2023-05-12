@@ -18,7 +18,6 @@ module.exports = {
 		node: true
 	},
 	rules: {
-		"custom-element-compile-options": "off",
 		quotes: ["warn", "double"],
 		semi: ["warn", "always"]
 	}
