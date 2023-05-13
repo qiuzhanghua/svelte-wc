@@ -2,7 +2,7 @@
   "extends": "@tsconfig/svelte/tsconfig.json",
   "exclude": ["node_modules/*"],
   "compilerOptions": {
-    "types": ["svelte", "node"],
+    "types": ["svelte"],
     "declaration": true,
     "outDir": "./dist/types",
     "declarationMap": true,
@@ -13,10 +13,10 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
-    "skipLibCheck": true,
-    "sourceMap": true,
+    "skipLibCheck": false,
+    "sourceMap": false,
     "strict": true,
-    "moduleResolution": "NodeNext"
+    "moduleResolution": "node"
   },
   "include": ["src/**/*"],
   "references": [{ "path": "./tsconfig.node.json" }]
