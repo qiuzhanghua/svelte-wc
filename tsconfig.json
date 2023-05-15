@@ -5,7 +5,7 @@
     "types": ["svelte"],
     "declaration": true,
     "outDir": "./dist/types",
-    "declarationMap": true,
+    "declarationMap": false,
     "emitDeclarationOnly": true,
     "noEmit": false,
     "allowJs": true,
@@ -16,7 +16,9 @@
     "skipLibCheck": false,
     "sourceMap": false,
     "strict": true,
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "allowImportingTsExtensions": true,
+    "jsx": "preserve"
   },
   "include": ["src/**/*"],
   "references": [{ "path": "./tsconfig.node.json" }]

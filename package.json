@@ -1,7 +1,7 @@
 {
   "name": "@qiuzhanghua/wc",
   "private": false,
-  "version": "0.0.4",
+  "version": "0.0.5",
   "type": "module",
   "files": [
     "src",
@@ -24,7 +24,9 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "dts": "tsc --emitDeclarationOnly --declaration --allowJs --checkJs --target esnext --moduleResolution node --outDir dist/types src/index.ts",
+    "package": "svelte-package -o dist/types",
+    "rm-svelte": "rimraf ./dist/types/**/*.svelte",
+    "build-all": "pnpm build && pnpm package && pnpm rm-svelte",
     "preview": "vite preview",
     "check": "svelte-check --tsconfig ./tsconfig.json",
     "lint": "eslint src --ext .ts --ext .svelte --ext .html",
@@ -32,6 +34,7 @@
     "clean": "rimraf ./dist"
   },
   "devDependencies": {
+    "@sveltejs/package": "^2.0.2",
     "@sveltejs/vite-plugin-svelte": "^2.2.0",
     "@tsconfig/svelte": "^4.0.1",
     "@types/node": "^20.1.3",
@@ -45,9 +48,13 @@
     "sveld": "^0.18.0",
     "svelte": "^3.59.1",
     "svelte-check": "^3.3.2",
+    "svelte-preprocess": "^5.0.3",
     "tslib": "^2.5.0",
     "typescript": "^5.0.4",
     "vite": "^4.3.5",
     "vite-plugin-dts": "^2.3.0"
+  },
+  "peerDependencies": {
+    "svelte": "^3.0.0"
   }
 }

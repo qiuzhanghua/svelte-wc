@@ -8,7 +8,8 @@ pnpm install
 
 ## build
 ```bash
-pnpm build
+pnpm build-all
+
 ```
 
 ## development
